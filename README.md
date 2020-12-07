@@ -6,7 +6,7 @@ Este es mi proyecto final para la materia de mineria de datos
 
 ## Lenguajes
 
-* Python3 
+* Python3
 * JavaScript
 * CSS
 * HTML
@@ -21,7 +21,7 @@ Este es mi proyecto final para la materia de mineria de datos
 
 [Flask](https://flask.palletsprojects.com/en/1.1.x/)  es un marco de aplicación web WSGI ligero. Está diseñado para que la puesta en marcha sea rápida y sencilla, con la capacidad de escalar a aplicaciones complejas.
 
-#### Instalación
+#### Instalación Flask
 
 >pip install flask
 
@@ -33,7 +33,7 @@ Este es mi proyecto final para la materia de mineria de datos
 
 [Sass](https://sass-lang.com/) es un preprocesador de css que nos ayudara a construir de manera mas rapida y eficiente los estilos de la pagina.
 
-#### Instalación
+#### Instalación Sass
 
 > sudo npm install -g sass
 
