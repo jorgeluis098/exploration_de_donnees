@@ -40,10 +40,10 @@ Este es mi proyecto final para la materia de mineria de datos
 #### Compilado
 
 Un solo archivo
-> sass styles/scss/styles.scss  styles/css/styles.css
+> sass static/styles/scss/main.scss  static/styles/css/main.css
 
 Compilado de varios archivos
-> sass --watch styles/scss:styles/css
+> sass --watch /static/styles/scss:static/styles/css
 
 #### Creacion de hojas de estilos
 

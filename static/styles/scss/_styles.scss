@@ -1,0 +1,40 @@
+@import 'utilities/variables';
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu-nav {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  body{
+    margin: 0;
+    overflow-x: hidden;
+  }
+.one{
+    background-color: $blue;
+    display: flex;
+  }
+.two{
+    background-color: $wine;
+  }
+.full{
+    height: 100vh;
+    width: 100vw;
+  }
+.one-section, .two-section{
+    padding: 0 0 0 65px;
+  }
+h1, h2 {
+    color: $white;
+    margin: 0;
+  }
