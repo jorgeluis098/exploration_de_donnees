@@ -7,6 +7,18 @@
     left: 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
+    background: #999;
+    li {
+        &:hover{
+            background: #ccc;
+        }
+        a {
+            text-align: center;
+        }
+    }
+    p{
+        text-align: center;
+    }
   }
   
   .page-content {
@@ -58,7 +70,7 @@
         box-shadow: none;
     }
     span{
-        color: black;
+        color: white;
         opacity: 0.4;
     }
 }

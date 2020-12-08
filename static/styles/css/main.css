@@ -10,12 +10,12 @@ body {
 }
 
 .one {
-  background-color: #0c566b;
+  background-color: #111;
   display: flex;
 }
 
 .two {
-  background-color: #6b1632;
+  background-color: #111;
 }
 
 .full {
@@ -41,6 +41,16 @@ h1, h2 {
   left: 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
+  background: #999;
+}
+.vertical-nav li:hover {
+  background: #ccc;
+}
+.vertical-nav li a {
+  text-align: center;
+}
+.vertical-nav p {
+  text-align: center;
 }
 
 .page-content {
@@ -95,7 +105,7 @@ h1, h2 {
   box-shadow: none;
 }
 #sidebarCollapse span {
-  color: black;
+  color: white;
   opacity: 0.4;
 }
 
