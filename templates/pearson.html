@@ -1,12 +1,19 @@
-{% extends 'index.html'%}
+{% extends 'layout.html'%}
 
-{% block general%}
+{% block body%}
 <div class="one full">
     <div class="one-section page-content p-5" id="content">
         <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
             <span class="material-icons">
                 view_list
             </span>
+        </button>
+        <button  type="button" class="btn button_home">
+            <a href="/">
+                   <span class="material-icons">
+                home
+            </span>
+            </a>
         </button>
         <h1>seccion perason   ?</h1>
     </div>

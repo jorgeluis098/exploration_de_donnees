@@ -33,3 +33,15 @@ h1, h2 {
     color: #aaa;
   }
 }
+
+//cards 
+.card{
+  &:hover{
+      box-shadow: 0 .5rem 1rem rgba(40, 209, 194,.75);
+  }
+}
+.card_pearson{
+  img{
+    margin: 57px 0px;
+  }
+}

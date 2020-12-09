@@ -1,66 +1,37 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'layout.html'%}
 
-<head>
-    <title>Proyecto Mineria Datos </title>
-    <meta charset="utf-8">
-    <meta name="description" content="descripcion de lo que se muestra en el navegador">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.3"> -->
-    <!-- <link rel="icon" type="image/svg+xml" href="/images/logo.svg" sizes="any"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/styles/css/main.css">
-</head>
-
-<body>
-    <!-- inicio de menu nav -->
-    <div class="vertical-nav" id="sidebar">  
-        <p class="text-gray font-weight-bold text-uppercase px-3 my-3">Algoritmos</p>  
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a href="apriori" class="nav-link text-dark font-italic">
-                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                    Apriory
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="pearson" class="nav-link text-dark font-italic">
-                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                    Pearson
-                </a>
-             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
-                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                    Distancias
-                </a>
-            </li>
-             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
-                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
-                    k-mean
-                </a>
-            </li>
-        </ul>
+{% block body%}
+<div class="one">
+    <div class="one-section page-content p-5" id="content">
+        <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
+            <span class="material-icons">
+                view_list
+            </span>
+        </button>
+        <h1>¡Bienvenido!</h1>
+        <div class="home"> 
+            <p class="p1 mt-1">Este es mi proyecto para la materia de mineria de datos</p>
+            <p class="p2">el proposito de esta pagina es mostrar los diferentes algoritmos, entre los diferentes algoritmos que vas a poder encontar estan:</p>
+            <p class="p3"></p>
+            <div class="d-flex">
+                <div class="card mx-3 card_apriori" style="width: 18rem;">
+                    <img src="/static/images/reglas_asociacion_apriory.jpg" class="card-img-top" alt="reglas de asociacion">
+                    <div class="card-body">
+                        <h5 class="card-title">Apriori</h5>
+                        <p class="card-text">El algoritmo apriori es un algoritmo utilizado en minería de datos, sobre bases de datos transaccionales, que permite encontrar de forma eficiente "conjuntos de ítems frecuentes", los cuales sirven de base para generar reglas de asociación.</p>
+                        <a href="apriori" class="btn btn-primary btn-dark">Pruebalo</a>
+                    </div>
+                </div>
+                <div class="card mx-3 card_pearson" style="width: 18rem;">
+                    <img src="/static/images/correlacion_pearson.jpg" class="card-img-top" alt="reglas de asociacion">
+                    <div class="card-body">
+                        <h5 class="card-title">Coeficiente de correlación de Pearson</h5>
+                        <p class="card-text">El coeficiente de correlación de Pearson es una prueba que mide la relación estadística entre dos variables continuas. Si la asociación entre los elementos no es lineal, entonces el coeficiente no se encuentra representado adecuadamente.</p>
+                        <a href="pearson" class="btn btn-primary btn-dark">Pruebalo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- fin de menu nav -->
-    <!-- inicio de contenido -->
-    {% block general%}
-
-    {% endblock%}
-    <!-- fin de contenido -->
-    <!-- script para activar navbar -->
-    <script >
-        function navswitch(){
-            var element = document.getElementById("sidebar");
-            var element2 = document.getElementById("content");
-            var element3 = document.getElementById("content2");
-            element.classList.toggle("active");
-            element2.classList.toggle("active");
-            element3.classList.toggle("active");
-        } 
-    </script>
-</body>
-
-</html>
+</div
+{% endblock%}

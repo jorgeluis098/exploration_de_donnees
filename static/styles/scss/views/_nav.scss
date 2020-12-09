@@ -40,6 +40,10 @@
         left: 0;
         top: 0;
     }
+    .button_home{
+      left: 0;
+      top: 50px;
+    }
   }
   
   @media (max-width: 768px) {
@@ -73,4 +77,22 @@
         color: white;
         opacity: 0.4;
     }
+}
+
+// home button 
+.button_home{
+  background:transparent;
+  position: fixed;
+  right: calc(100% - 13rem);
+  bottom: calc(100% - 6rem);
+  &:hover{
+      background: transparentize($color: $white, $amount: 0.7);
+  }
+  &:focus{
+      box-shadow: none;
+  }
+  span{
+      color: white;
+      opacity: 0.4;
+  }
 }

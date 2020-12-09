@@ -36,6 +36,14 @@ h1, h2 {
   color: #aaa;
 }
 
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(40, 209, 194, 0.75);
+}
+
+.card_pearson img {
+  margin: 57px 0px;
+}
+
 .vertical-nav {
   min-width: 10rem;
   width: 10rem;
@@ -76,6 +84,10 @@ h1, h2 {
   left: 0;
   top: 0;
 }
+#content.active .button_home, #content2.active .button_home {
+  left: 0;
+  top: 50px;
+}
 
 @media (max-width: 768px) {
   #sidebar {
@@ -109,6 +121,23 @@ h1, h2 {
   box-shadow: none;
 }
 #sidebarCollapse span {
+  color: white;
+  opacity: 0.4;
+}
+
+.button_home {
+  background: transparent;
+  position: fixed;
+  right: calc(100% - 13rem);
+  bottom: calc(100% - 6rem);
+}
+.button_home:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.button_home:focus {
+  box-shadow: none;
+}
+.button_home span {
   color: white;
   opacity: 0.4;
 }
