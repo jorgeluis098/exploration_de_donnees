@@ -44,6 +44,10 @@ h1, h2 {
   margin: 57px 0px;
 }
 
+.contenido {
+  color: #aaa;
+  text-align: justify;
+}
 .vertical-nav {
   min-width: 10rem;
   width: 10rem;
