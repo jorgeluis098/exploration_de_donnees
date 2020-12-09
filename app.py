@@ -4,11 +4,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("home.html")
 
-@app.route("/nav")
-def navegation():
-    return render_template("nav.html")
+@app.route("/apriori")
+def aprior():
+    return render_template("apriory.html")
+
+@app.route("/pearson")
+def pearso():
+    return render_template("pearson.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

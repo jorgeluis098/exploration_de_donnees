@@ -1,0 +1,33 @@
+{% extends 'index.html'%}
+
+{% block general%}
+<div class="one">
+    <div class="one-section page-content p-5" id="content">
+        <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
+            <span class="material-icons">
+                view_list
+            </span>
+        </button>
+        <h1>¡Bienvenido!</h1>
+        <div class="home"> 
+            <p class="p1 mt-1">Este es mi proyecto para la materia de mineria de datos</p>
+            <p class="p2">el proposito de esta pagina es mostrar los diferentes algoritmos, entre los diferentes algoritmos que vas a poder encontar estan:</p>
+            <p class="p3"></p>
+            <div class="d-flex">
+                <div class="card mx-2" style="width: 18rem;">
+                    <img src="/static/images/reglas_asociacion_apriory.jpg" class="card-img-top" alt="reglas de asociacion">
+                    <div class="card-body">
+                       <p class="card-text">El algoritmo apriori es un algoritmo utilizado en minería de datos, sobre bases de datos transaccionales, que permite encontrar de forma eficiente "conjuntos de ítems frecuentes", los cuales sirven de base para generar reglas de asociación.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                       <p class="card-text"> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div
+{% endblock%}

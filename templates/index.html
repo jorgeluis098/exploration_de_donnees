@@ -19,13 +19,13 @@
         <p class="text-gray font-weight-bold text-uppercase px-3 my-3">Algoritmos</p>  
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
+                <a href="apriori" class="nav-link text-dark font-italic">
                     <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
                     Apriory
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-italic">
+                <a href="pearson" class="nav-link text-dark font-italic">
                     <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
                     Pearson
                 </a>
@@ -46,21 +46,9 @@
     </div>
     <!-- fin de menu nav -->
     <!-- inicio de contenido -->
-    <div class="one full">
-        <div class="one-section page-content p-5" id="content">
-            <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
-                <span class="material-icons">
-                    view_list
-                </span>
-            </button>
-            <h1>seccion donde se pone a pruebaaaaa el algortimo  ?</h1>
-        </div>
-    </div>
-    <div class="two full">
-        <div class="two-section page-content p-5" id="content2">
-            <h2>seccion donde se describe el algoritmo</h2>
-        </div>
-    </div>
+    {% block general%}
+
+    {% endblock%}
     <!-- fin de contenido -->
     <!-- script para activar navbar -->
     <script >

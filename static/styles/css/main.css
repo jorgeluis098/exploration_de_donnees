@@ -32,6 +32,10 @@ h1, h2 {
   margin: 0;
 }
 
+.home .p1, .home .p2 {
+  color: #aaa;
+}
+
 .vertical-nav {
   min-width: 10rem;
   width: 10rem;
