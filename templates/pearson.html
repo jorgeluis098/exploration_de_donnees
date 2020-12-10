@@ -1,7 +1,7 @@
 {% extends 'layout.html'%}
 
 {% block body%}
-<div class="one full">
+<div class="one ">
     <div class="one-section page-content p-5" id="content">
         <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
             <span class="material-icons">
@@ -15,12 +15,72 @@
             </span>
             </a>
         </button>
-        <h1>seccion perason   ?</h1>
+        <h1 class="mb-2">Coeficiente de correlación de Pearson</h1>
+        <div class="contenido">
+            <div class="contenido_c1">
+                <h3>Análisis correlacional de datos</h3> 
+                <p>En estadística, el coeficiente de correlación de Pearson es una medida de dependencia lineal entre dos variables aleatorias cuantitativas. A diferencia de la covarianza, la correlación de Pearson es independiente de la escala de medida de las variables.</p>
+                <img src="/static/images/pearson_formula.png" class="mb-3">
+                <p>Los valores de correlación, en este caso R, pueden variar entre -1 y 1. <span class="fw-bold"></span></p>
+                <div>
+                    Reglas de la correlacion:
+                    <ul>
+                        <li>
+                            Cuanto <span class="fw-bold">más cerca está R de 1 o -1</span> , más fuerte es la correlación.
+                        </li>
+                        <li>
+                            Si <span class="fw-bold">R es cercano a -1</span> las variables están correlacionadas negativamente.
+                        </li>
+                        <li>
+                            Si <span class="fw-bold">R es cero</span> no existe correlación.
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-3">
+                    Intervalos para la identificación de correlaciones:
+                    <ul>
+                        <li>
+                            De <span class="fw-bold">-1.0 a -0.67 y 0.67 a 1.0</span>  se conocen como correlaciones <span class="fw-bold">fuertes o altas.</span>
+                        </li>
+                        <li>
+                            De <span class="fw-bold">-0.66 a -0.34 y 0.34 a 0.66</span>  se conocen como correlaciones <span class="fw-bold">moderadas o medias.</span> 
+                        </li>
+                        <li>
+                            De <span class="fw-bold">-0.33 a 0.0 y 0.0 a 0.33 </span>se conocen como correlaciones <span class="fw-bold">débiles o bajas.</span>
+                        </li>
+                    </ul>
+                </div>
+                <h3 class="mt-3">Matriz de correlaciones</h3>
+                <p>Consiste en crear una matriz que aporta información sobre la relación entre pares de variables.</p>
+                <p>El objetivo es obtener un subconjunto de variables representativas que no tengan dependencia entre sí.</p>
+                <img src="/static/images/matriz_pearson.png">
+            </div>
+        </div>
     </div>
 </div>
-<div class="two full">
+<div class="two ">
     <div class="two-section page-content p-5" id="content2">
-        <h2>Descripcion de algoritmo apriory </h2>
+        <h2 class="mb-3">Algoritmo Pearson</h2>
+        <div>
+            <form id="form_apriori" >
+                <div class="mb-3">
+                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
+                </div>
+                <div class="mb-3">
+                    <label for="supportApriori" class="form-label labelSubtitle">Plot-x</label>
+                    <input type="number" class="form-control" id="supportApriori" aria-describedby="Soporte" name= "supportApriori" >
+                    <div class="form-text">Indica que variable se va a graficar en el eje x.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confianzaApriori" class="form-label labelSubtitle">Plot-y</label>
+                    <input type="number" class="form-control" id="confianzaApriori" aria-describedby="Confianza" name= "confianzaApriori" >
+                    <div class="form-text">Indica que variable se va a graficar en el eje y.</div>
+                </div>
+                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock%}

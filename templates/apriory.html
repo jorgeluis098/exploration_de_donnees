@@ -74,16 +74,43 @@
                     </ul>
                 </div>
             </div>
-            <div class="contenido_c2">
-
-            </div>
-
         </div>
     </div>
 </div>
 <div class="two ">
     <div class="two-section page-content p-5" id="content2">
-        <h2>Algoritmo Apriori</h2>
+        <h2 class="mb-3">Algoritmo Apriori</h2>
+        <div>
+            <form id="form_apriori" >
+                <div class="mb-3">
+                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
+                </div>
+                <div class="mb-3">
+                    <label for="supportApriori" class="form-label labelSubtitle">Soporte</label>
+                    <input type="number" class="form-control" id="supportApriori" aria-describedby="Soporte" name= "supportApriori" >
+                    <div class="form-text">Indica cuan importante es una regla dentro del total de transacciones.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confianzaApriori" class="form-label labelSubtitle">Confianza</label>
+                    <input type="number" class="form-control" id="confianzaApriori" aria-describedby="Confianza" name= "confianzaApriori" >
+                    <div class="form-text">Indica que tan fiable es una regla.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="liftApriori" class="form-label labelSubtitle">Elevación</label>
+                    <input type="number" class="form-control" id="liftApriori" aria-describedby="Elevación" name= "liftApriori" >
+                    <div class="form-text">Indica el nivel de relación de los componentes de la regla </div>
+                </div>
+                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+            </form>
+        </div>
+        <div id="table_values" style="display: none;" >
+            <span>Hay  </span> <span id="span_len">x</span> <span> registros</span>
+            <div id="head_table">
+            </div>
+        </div>
+        
     </div>
 </div>
 {% endblock%}

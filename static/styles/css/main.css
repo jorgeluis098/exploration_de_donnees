@@ -17,6 +17,12 @@ body {
 .two {
   background-color: #111;
 }
+.two .labelTitle {
+  color: yellow;
+}
+.two .labelSubtitle {
+  color: deepskyblue;
+}
 
 .full {
   height: 100vh;
@@ -44,10 +50,16 @@ h1, h2 {
   margin: 57px 0px;
 }
 
+.botonCard {
+  position: absolute;
+  bottom: 15px;
+}
+
 .contenido {
   color: #aaa;
   text-align: justify;
 }
+
 .vertical-nav {
   min-width: 10rem;
   width: 10rem;
@@ -57,10 +69,10 @@ h1, h2 {
   left: 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
-  background: #999;
+  background: yellow;
 }
 .vertical-nav li:hover {
-  background: #ccc;
+  background: deepskyblue;
 }
 .vertical-nav li a {
   text-align: center;

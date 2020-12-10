@@ -15,6 +15,12 @@ body {
   }
 .two {
     background-color: #111;
+    .labelTitle{
+      color: yellow;
+    }
+    .labelSubtitle{
+      color: deepskyblue;
+    }
   }
 .full {
     height: 100vh;
@@ -45,10 +51,13 @@ h1, h2 {
     margin: 57px 0px;
   }
 }
+.botonCard{
+  position: absolute;
+  bottom: 15px;
+}
 
 // texto
 .contenido{
   color: #aaa;
   text-align: justify;
-  p{}
 }
