@@ -4,7 +4,8 @@ $(document).ready(function (){
 	// 	event.preventDefault();
 	// });
 
-	$("#button_apriory").click(function(){
+	$("#button_apriory").click(function(event){
+		event.preventDefault();
 		var formData = new FormData($('#form_apriori')[0]);
 		console.log("Hola bebe entre a leer el archivo");
 		$.ajax({
@@ -14,11 +15,11 @@ $(document).ready(function (){
 			contentType: false,
 			processData: false,
 			success: function(response){
-				$("#table_values").html(response["sel_columns_html"]);
-				$("#head_table").html(response["head"]);
-				columns = response["columns"];
-				$("#features-container").css("display","block");
+				console.log(response['key']);
+				$('#table_values').html(response['key'])
+				$('#table_apriori').DataTable();
 				
+			
 			},
 			error: function(error){
 				console.log(error);

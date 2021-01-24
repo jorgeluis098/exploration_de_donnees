@@ -69,7 +69,7 @@ h1, h2 {
   left: 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
-  background: yellow;
+  background: #111;
 }
 .vertical-nav li:hover {
   background: deepskyblue;

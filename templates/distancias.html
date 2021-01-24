@@ -1,0 +1,149 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<div class="one ">
+    <div class="one-section page-content p-5" id="content">
+        <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
+            <span class="material-icons">
+                view_list
+            </span>
+        </button>
+        <button  type="button" class="btn button_home">
+            <a href="/">
+                   <span class="material-icons">
+                home
+            </span>
+            </a>
+        </button>
+        <h1 class="mb-2">Estimación de similitudes</h1>
+        <div class="contenido">
+            <div class="contenido_c1">
+                <h3>Distancias y métricas de aprendizaje automático</h3> 
+                <p>En varios algoritmos de aprendizaje automático es necesario medir la separación o similitud
+                    entre diferentes registros (elementos).</p>
+                <p>Matemáticamente, una distancia es una función, <span class="fw-bold">d (a,b)</span> que asigna un valor positivo a cada
+                    par de puntos de un espacio n-dimensional.</p>
+                <div>
+                    <h4> Distancia Euclidiana </h4>
+                    <ul>
+                        <li>
+                            Distancia euclidiana (euclídea, por Euclides) es una función usada para calcular la distancia
+                            entre dos puntos, conocida también como espacio euclidiano.
+                        </li>
+                        <li>
+                            Sus bases se encuentran en la aplicación del Teorema de Pitágoras (métrica Pitagórica).
+                        </li>
+                        <li>
+                            Donde la distancia euclidiana viene a ser la longitud de la hipotenusa.
+                        </li>
+                        <li>
+                            <p class="mt-4">Para el cálculo de las distancia euclidiana se utiliza:</p>
+                            <img class="mt-2 mx-4"src="/static/images/EuclidianaFormula02.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-5">
+                    <h4> Distancia de Chebyshev </h4> 
+                    <ul>
+                        <li>
+                            La distancia de Chebyshev entre puntos es el valor máximo absoluto de las diferencias entre
+                            las coordenadas de un par de elementos.
+                        </li>
+                        <li>
+                            Lleva el nombre del matemático ruso Pafnuty Chebyshev, conocido por su trabajo la
+                            geometría analítica y teoría de números.                     
+                        </li>
+                        <li>
+                            Otros nombres para la distancia de Chebyshev son métrica máxima.
+                        </li>
+                        <li>
+                            <p class="mt-4">Para el cálculo de las distancia euclidiana se utiliza:</p>
+                            <img class="mt-2 mx-4"src="/static/images/ChebyshevFormula.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-5">
+                    <h4> Distancia de Manhattan </h4> 
+                    <ul>
+                        <li>
+                            La distancia de Manhattan es útil para calcular la distancia entre dos puntos en una enorme
+                            cuadrícula.
+                        </li>
+                        <li>
+                            Se llama Manhattan debido al diseño de cuadrícula de la mayoría de las calles de la isla de
+                            Manhattan.
+                        </li>
+                        <li>
+                            <p class="mt-4">Para el cálculo de las distancia euclidiana se utiliza:</p>
+                            <img class="mt-2 mx-4"src="/static/images/ManhatanFormula.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-5">
+                    <h4> Distancia de Minkowsky </h4> 
+                    <ul>
+                        <li>
+                            La distancia de Minkowski es una distancia entre dos puntos en el espacio n-dimensional. Es
+                            una generalización de las distancias Euclidiana, Manhattan y Chebyshev.
+                        </li>
+                        <li>
+                            <p class="mt-4">Para el cálculo de las distancia euclidiana se utiliza:</p>
+                            <img class="mt-2 mb-4 mx-4"src="/static/images/MinkouskiFormula.png">
+                        </li>
+                        <li>
+                            <p>Donde λ es el orden para calcular la distancia de tres formas diferentes:</p>
+                            <p>λ = 1, distancia de Manhattan (métrica L1) </p>
+                            <p>λ = 2, distancia Euclidiana (métrica L2) </p>
+                            <p>λ = ∞, distancia de Chebyshev (métrica L) </p>
+                            <p>Los valores intermedios de λ, por ejemplo, λ = 1.5, proporcionan un
+                                equilibrio entre las medidas. </p>    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="two ">
+    <div class="two-section page-content p-5" id="content2">
+        <h2 class="mb-3">Medicion</h2>
+        <div>
+            <form id="form_apriori" >
+                <div class="mb-3">
+                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confianzaApriori" class="form-label labelSubtitle">Distancia</label>
+                    <select class="form-select" aria-label="Default select example" onChange="mostrar(this.value);">
+                        <option selected>Seleciona una de las opciones para calcular la distancia</option>
+                        <option value="Euclidiana">Distancia Euclidiana </option>
+                        <option value="Chebyshev">Distancia de Chebyshev</option>
+                        <option value="Manhattan">Distancia de Manhattan</option>
+                        <option value="Minkowsky">Distancia de Minkowsky</option>
+                    </select>
+                    <div id="select_lambda" style="display: none;">
+                        <label for="lambda" class="form-label labelSubtitle mt-3">lambda  λ</label>
+                        <input type="number" class="form-control" id="lambda" aria-describedby="lambda" name= "lambda" >
+                        <div class="form-text">Escribe el valor de lambda  λ</div>
+                    </div>                      
+                </div>
+                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function mostrar(id) {
+        if (id == "Minkowsky") {
+            $("#select_lambda").show();
+        }
+        if (id !== "Minkowsky" ) {
+            $("#select_lambda").hide();
+        }
+    }
+</script>
+{% endblock%}

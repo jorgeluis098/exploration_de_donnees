@@ -1,0 +1,100 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<div class="one ">
+    <div class="one-section page-content p-5" id="content">
+        <button onclick="navswitch()" id="sidebarCollapse" type="button" class="btn">
+            <span class="material-icons">
+                view_list
+            </span>
+        </button>
+        <button  type="button" class="btn button_home">
+            <a href="/">
+                   <span class="material-icons">
+                home
+            </span>
+            </a>
+        </button>
+        <h1 class="mb-2">Clustering Particional</h1>
+        <div class="contenido">
+            <div class="contenido_c1">
+                <h3>Algoritmo K-means</h3>
+                <p>
+                    K-means es uno de los algoritmos ampliamente utilizado en el mundo académico y la industria.
+                    Crea k clústeres a partir de un conjunto de elementos (objetos), de modo que los miembros
+                    de un grupo sean similares.
+                </p>
+                <p>
+                    Ejemplo: Pacientes por edad, pulso, presión arterial, colesterol, entre otros.
+                </p>
+                <div class="d-flex">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p><span class="fw-bold">Pulso </span>una dimension</p>
+                        <p><span class="fw-bold">Presión arterial </span>otra dimension</p>
+                        <p><span class="fw-bold">Colesterol </span>otra dimension</p>
+
+                    </div>
+                    <img src="/static/images/kmeansEjemplo.png" class="mb-3 ms-5">
+                </div>
+                
+                <p>El algoritmo k-means resuelve problemas de optimización, dado que la función es minimizar
+                    (optimizar) la suma de las distancias de cada elemento al centroide de un cluster.</p>
+                <div>
+                    <span class="fw-bold">Cetroide:</span>
+                    <ul>
+                        <li>
+                            El centroide es el punto que ocupa la posición media en un cluster.
+                        </li>
+                        <li>
+                            Al inicio, cuando se empieza a definir el cluster, es probable que el centroide no tenga
+                            relación con algunos de los elementos.
+                        </li>
+                        <li>
+                            Posteriormente, la ubicación del centroide se calcula de manera iterativa.
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-3">
+                    <span class="fw-bold">Pseudocodigo:</span>
+                    <ul>
+                        <li>
+                            1 Inicio: Se establecen k centroides para la
+                            formación de k grupos. Estos centroides
+                            (elementos) se eligen aleatoriamente.
+                        </li>
+                        <li>
+                            2 Asignación: Cada elemento es asignado
+                            al centroide más cercano.
+                        </li>
+                        <li>
+                            3 Actualización: Se actualiza la posición
+                            del centroide con base en la media de los
+                            elementos asignados en el cluster.
+                        </li>
+                        <li>
+                           4 Repetir: Se repiten los pasos 2 y 3 de
+                            manera iterativa hasta que los centroides
+                            no cambien más. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="two ">
+    <div class="two-section page-content p-5" id="content2">
+        <h2 class="mb-3">Algoritmo K-means</h2>
+        <div>
+            <form id="form_k-means" >
+                <div class="mb-3">
+                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
+                </div>
+                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock%}

@@ -81,7 +81,7 @@
     <div class="two-section page-content p-5" id="content2">
         <h2 class="mb-3">Algoritmo Apriori</h2>
         <div>
-            <form id="form_apriori" >
+            <form id="form_apriori" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                   <label for="fileApriori" class="form-label labelTitle">Archivo</label>
                   <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
@@ -102,15 +102,13 @@
                     <input type="number" class="form-control" id="liftApriori" aria-describedby="Elevación" name= "liftApriori" >
                     <div class="form-text">Indica el nivel de relación de los componentes de la regla </div>
                 </div>
-                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+                <button id="button_apriory" class="btn btn-primary">SEND</button>
             </form>
         </div>
-        <div id="table_values" style="display: none;" >
-            <span>Hay  </span> <span id="span_len">x</span> <span> registros</span>
-            <div id="head_table">
-            </div>
+        <div id="table_values" > 
+            
         </div>
-        
+
     </div>
 </div>
 {% endblock%}
