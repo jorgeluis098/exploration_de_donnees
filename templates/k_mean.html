@@ -86,14 +86,22 @@
     <div class="two-section page-content p-5" id="content2">
         <h2 class="mb-3">Algoritmo K-means</h2>
         <div>
-            <form id="form_k-means" >
+            <form id="form_k" method="POST" enctype="multipart/form-data" >
                 <div class="mb-3">
-                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
-                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <label for="fileK_means" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="fileK_means" aria-describedby="archivo" name= "fileK_means" accept=" .txt, .csv">
                   <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
                 </div>
-                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+                <div class="mb-3">
+                    <label for="clusters" class="form-label labelSubtitle">Numero de clusters</label>
+                    <input type="number" class="form-control" id="clusters" aria-describedby="clusters" name= "clusters" >
+                    <div class="form-text">Indica el numero de clusters k</div>
+                </div>
+                <button id="button_k"  class="btn btn-primary">SEND</button>
             </form>
+            <div id="centroides">
+
+            </div>
         </div>
     </div>
 </div>

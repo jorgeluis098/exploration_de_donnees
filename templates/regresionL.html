@@ -62,13 +62,49 @@
     <div class="two-section page-content p-5" id="content2">
         <h2 class="mb-3">Algoritmo Pearson</h2>
         <div>
-            <form id="form_apriori" >
+            <form id="form_regresion" method="POST" enctype="multipart/form-data">
+                <!-- Area -->
                 <div class="mb-3">
-                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
-                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
-                  <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
+                    <label for="Area" class="form-label labelSubtitle">Area</label>
+                    <input type="number" class="form-control" id="Area" aria-describedby="Area" name= "Area" >
+                    <div class="form-text">Indica el Area </div>
                 </div>
-                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+                <!--Textura-->
+                <div class="mb-3">
+                    <label for="Texture" class="form-label labelSubtitle">Textura</label>
+                    <input type="number" class="form-control" id="Texture" aria-describedby="Elevación" name= "Texture" >
+                    <div class="form-text">Indica la Textura </div>
+                </div>
+                <!-- Compactness -->
+                <div class="mb-3">
+                    <label for="Compactness" class="form-label labelSubtitle">Compactness</label>
+                    <input type="number" class="form-control" id="Compactness" aria-describedby="Elevación" name= "Compactness" >
+                    <div class="form-text">Indica Compactness </div>
+                </div>
+                <!-- Concativity -->
+                <div class="mb-3">
+                    <label for="Concativity" class="form-label labelSubtitle">Concatividad</label>
+                    <input type="number" class="form-control" id="Concativity" aria-describedby="Elevación" name= "Concavity" >
+                    <div class="form-text">Indica la concatividad </div>
+                </div>
+                <!-- Simmetry -->
+                <div class="mb-3">
+                    <label for="Simmetry" class="form-label labelSubtitle">Simetria</label>
+                    <input type="number" class="form-control" id="Simmetry" aria-describedby="Elevación" name= "Symmetry" >
+                    <div class="form-text">Indica la Simetria </div>
+                </div>
+                <!-- Fractal Dimension -->
+                <div class="mb-3">
+                    <label for="Dimension" class="form-label labelSubtitle">Fractal Dimension</label>
+                    <input type="number" class="form-control" id="Dimension" aria-describedby="Dimension" name= "FractalDimension" >
+                    <div class="form-text">Indica la Dimension Fractal </div>
+                </div>
+                <div class="mb-3">
+                    <label for="resultao" class="form-label labelSubtitle">El resultado es</label>
+                    <input type="text" class="form-control" id="resultao" aria-describedby="resultao" name= "resultao" disabled >
+                    <div class="form-text">Indica la Dimension Fractal </div>
+                </div>
+                <button id="button_regresion"  class="btn btn-primary">SEND</button>
             </form>
         </div>
     </div>

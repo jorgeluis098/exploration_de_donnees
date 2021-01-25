@@ -108,16 +108,15 @@
     <div class="two-section page-content p-5" id="content2">
         <h2 class="mb-3">Medicion</h2>
         <div>
-            <form id="form_apriori" >
+            <form id="form_distancias" method="POST" enctype="multipart/form-data" >
                 <div class="mb-3">
-                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
-                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <label for="fileDistancias" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="fileDistancias" aria-describedby="archivo" name= "fileDistancias" accept=" .txt, .csv">
                   <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
                 </div>
                 <div class="mb-3">
-                    <label for="confianzaApriori" class="form-label labelSubtitle">Distancia</label>
-                    <select class="form-select" aria-label="Default select example" onChange="mostrar(this.value);">
-                        <option selected>Seleciona una de las opciones para calcular la distancia</option>
+                    <label  class="form-label labelSubtitle">Distancia</label>
+                    <select class="form-select" id="select_distancias" aria-label="Default select example" onChange="mostrar(this.value);">
                         <option value="Euclidiana">Distancia Euclidiana </option>
                         <option value="Chebyshev">Distancia de Chebyshev</option>
                         <option value="Manhattan">Distancia de Manhattan</option>
@@ -129,9 +128,11 @@
                         <div class="form-text">Escribe el valor de lambda  λ</div>
                     </div>                      
                 </div>
-                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+                <button id="button_distancias"  class="btn btn-primary">SEND</button>
             </form>
-            
+            <div id="matrizDistancias">
+                
+            </div>
         </div>
     </div>
 </div>

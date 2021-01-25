@@ -62,14 +62,17 @@
     <div class="two-section page-content p-5" id="content2">
         <h2 class="mb-3">Algoritmo Pearson</h2>
         <div>
-            <form id="form_apriori" >
+            <form id="form_pearson" method="POST" enctype="multipart/form-data" >
                 <div class="mb-3">
-                  <label for="fileApriori" class="form-label labelTitle">Archivo</label>
-                  <input type="file" class="form-control" id="fileApriori" aria-describedby="archivo" name= "fileApriori" accept=" .txt, .csv">
+                  <label for="filePearson" class="form-label labelTitle">Archivo</label>
+                  <input type="file" class="form-control" id="filePearson" aria-describedby="archivo" name= "filePearson" accept=" .txt, .csv">
                   <div class="form-text">Archivo a ser leido de tipo .txt  o .csv</div>
                 </div>
-                <button id="button_apriory" type="submit" class="btn btn-primary">SEND</button>
+                <button id="button_pearson" class="btn btn-primary">SEND</button>
             </form>
+        </div>
+        <div id="matrizPearson">
+
         </div>
     </div>
 </div>
