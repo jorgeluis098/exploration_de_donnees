@@ -68,6 +68,7 @@ def distancias():
 def processDistancias():
     response = {}
     if request.form:
+        lamda = 1
         lamda = float(request.form["lambda"])
         file_content = request.files["fileDistancias"].read().decode("utf-8")
         file_name = request.files["fileDistancias"].filename

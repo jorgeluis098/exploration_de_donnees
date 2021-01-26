@@ -10,10 +10,13 @@
     background: #111;
     li {
         &:hover{
-            background: deepskyblue;
+            background: rgba(0, 183, 255, 0.664);
         }
         a {
             text-align: center;
+        }
+        a:hover{
+          color: white !important;
         }
     }
     p{

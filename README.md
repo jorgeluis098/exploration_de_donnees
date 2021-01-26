@@ -11,6 +11,35 @@ Este es mi proyecto final para la materia de mineria de datos
 * CSS
 * HTML
 
+## Instalacion y ejecucion
+
+Creamos un nuevo ambiente con [Anaconda](https://docs.anaconda.com/anaconda/install/)
+
+>conda create --name WattsonMT
+
+activamos el ambiente que acabamos de crear 
+
+> conda activate WattsonMT
+
+Ejecutamos los siguientes comandos para instalar los paquetes y librerias nescesarias: 
+
+>conda install python
+
+>conda install flask
+
+>conda install pandas
+
+>conda install scipy
+
+>conda install matplotlib
+
+>pip install sklearn
+
+>pip install apyori
+
+para ejecutar el programa:
+
+>python app.py
 ## Librerias
 
 * Flask
@@ -43,7 +72,7 @@ Un solo archivo
 > sass static/styles/scss/main.scss  static/styles/css/main.css
 
 Compilado de varios archivos
-> sass --watch /static/styles/scss:static/styles/css
+> sass --watch static/styles/scss:static/styles/css
 
 #### Creacion de hojas de estilos
 

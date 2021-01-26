@@ -69,7 +69,64 @@ h1, h2 {
 //   }
 // }
 // texto
+
 .contenido{
   color: #aaa;
   text-align: justify;
+}
+
+#table_apriori_wrapper, #matrizDistanciass_wrapper, #cen_wrapper{
+  margin-top: 45px;
+  #table_apriori_length, #matrizDistanciass_length, #cen_length{
+    color: white;
+    select{
+      color: white;
+    }
+  }
+  #table_apriori_filter, #matrizDistanciass_filter, #cen_filter{
+    color: white;
+    input{
+      color: white;
+    }
+  }
+  thead{
+    tr{
+      color: white;
+    }
+  }
+}
+#matrizDistancias{
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+#matriz_pearson{
+  color: white;
+  border-color: white;
+  margin-top: 45px;
+
+}
+
+button:focus, input:focus, select:focus{
+  box-shadow: none !important;
+}
+
+#form_regresion{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  div{
+    width: 45%;
+    margin-right: 15px;
+  }
+}
+#button_regresion{
+  width: 100px;
+  height: 38px;
+  margin-top: 16px;
+}
+.color-white{
+  color: white;
 }

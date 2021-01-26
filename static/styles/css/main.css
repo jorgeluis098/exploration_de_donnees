@@ -60,6 +60,62 @@ h1, h2 {
   text-align: justify;
 }
 
+#table_apriori_wrapper, #matrizDistanciass_wrapper, #cen_wrapper {
+  margin-top: 45px;
+}
+#table_apriori_wrapper #table_apriori_length, #table_apriori_wrapper #matrizDistanciass_length, #table_apriori_wrapper #cen_length, #matrizDistanciass_wrapper #table_apriori_length, #matrizDistanciass_wrapper #matrizDistanciass_length, #matrizDistanciass_wrapper #cen_length, #cen_wrapper #table_apriori_length, #cen_wrapper #matrizDistanciass_length, #cen_wrapper #cen_length {
+  color: white;
+}
+#table_apriori_wrapper #table_apriori_length select, #table_apriori_wrapper #matrizDistanciass_length select, #table_apriori_wrapper #cen_length select, #matrizDistanciass_wrapper #table_apriori_length select, #matrizDistanciass_wrapper #matrizDistanciass_length select, #matrizDistanciass_wrapper #cen_length select, #cen_wrapper #table_apriori_length select, #cen_wrapper #matrizDistanciass_length select, #cen_wrapper #cen_length select {
+  color: white;
+}
+#table_apriori_wrapper #table_apriori_filter, #table_apriori_wrapper #matrizDistanciass_filter, #table_apriori_wrapper #cen_filter, #matrizDistanciass_wrapper #table_apriori_filter, #matrizDistanciass_wrapper #matrizDistanciass_filter, #matrizDistanciass_wrapper #cen_filter, #cen_wrapper #table_apriori_filter, #cen_wrapper #matrizDistanciass_filter, #cen_wrapper #cen_filter {
+  color: white;
+}
+#table_apriori_wrapper #table_apriori_filter input, #table_apriori_wrapper #matrizDistanciass_filter input, #table_apriori_wrapper #cen_filter input, #matrizDistanciass_wrapper #table_apriori_filter input, #matrizDistanciass_wrapper #matrizDistanciass_filter input, #matrizDistanciass_wrapper #cen_filter input, #cen_wrapper #table_apriori_filter input, #cen_wrapper #matrizDistanciass_filter input, #cen_wrapper #cen_filter input {
+  color: white;
+}
+#table_apriori_wrapper thead tr, #matrizDistanciass_wrapper thead tr, #cen_wrapper thead tr {
+  color: white;
+}
+
+#matrizDistancias {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+#matriz_pearson {
+  color: white;
+  border-color: white;
+  margin-top: 45px;
+}
+
+button:focus, input:focus, select:focus {
+  box-shadow: none !important;
+}
+
+#form_regresion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#form_regresion div {
+  width: 45%;
+  margin-right: 15px;
+}
+
+#button_regresion {
+  width: 100px;
+  height: 38px;
+  margin-top: 16px;
+}
+
+.color-white {
+  color: white;
+}
+
 .vertical-nav {
   min-width: 10rem;
   width: 10rem;
@@ -72,10 +128,13 @@ h1, h2 {
   background: #111;
 }
 .vertical-nav li:hover {
-  background: deepskyblue;
+  background: rgba(0, 183, 255, 0.664);
 }
 .vertical-nav li a {
   text-align: center;
+}
+.vertical-nav li a:hover {
+  color: white !important;
 }
 .vertical-nav p {
   text-align: center;
